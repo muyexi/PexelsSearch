@@ -4,7 +4,7 @@ import Foundation
 struct SearchResult: Codable {
     let totalResults, page, perPage: Int
     let photos: [Photo]
-    let nextPage: String
+    let nextPage: String?
 }
 
 // MARK: - Photo
@@ -16,7 +16,7 @@ struct Photo: Codable, Hashable, Identifiable {
     let photographerID: Int?
     let avgColor: String
     let src: PhotoSrc
-    let liked: Bool
+    let liked: Bool?
     let alt: String
 
     static func == (lhs: Photo, rhs: Photo) -> Bool {

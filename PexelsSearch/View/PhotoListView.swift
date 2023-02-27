@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct PhotoListView: View {
+    @ObservedObject private(set) var viewModel: PhotoListViewModel
+
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -13,29 +15,39 @@ struct PhotoListView: View {
                     .navigationTitle("Pexels")
                     .navigationBarTitleDisplayMode(.inline)
             }
+            .searchable(text: $viewModel.searchText)
         }
     }
 
     @ViewBuilder private var content: some View {
-        ScrollView {
-            LazyVGrid(columns: columns) {
-                ForEach(SearchResult.mockedData?.photos ?? []) { photo in
-                    NavigationLink(destination: PhotoDetailView(photo: photo)) {
-                        GeometryReader { geo in
-                            PhotoItemView(size: geo.size.width, photo: photo)
+        switch viewModel.status {
+        case .loading:
+            Text(viewModel.statusMessage)
+            ProgressView()
+        case let .loaded(result):
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(result.photos) { photo in
+                        NavigationLink(destination: PhotoDetailView(photo: photo)) {
+                            GeometryReader { geo in
+                                PhotoItemView(size: geo.size.width, photo: photo)
+                            }
                         }
+                        .cornerRadius(8.0)
+                        .aspectRatio(1, contentMode: .fit)
                     }
-                    .cornerRadius(8.0)
-                    .aspectRatio(1, contentMode: .fit)
                 }
+                .padding()
             }
-            .padding()
+            Text(viewModel.statusMessage).font(.footnote).foregroundColor(.gray)
+        default:
+            Text(viewModel.statusMessage)
         }
     }
 }
 
 struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoListView()
+        PhotoListView(viewModel: PhotoListViewModel(service: SearchPhotoRepository()))
     }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D53622129ACE00A00CD5EBE /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622029ACE00A00CD5EBE /* PhotoDetailView.swift */; };
+		8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */; };
+		8D53622729ACE2A800CD5EBE /* SearchPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */; };
+		8D53622929ACE61200CD5EBE /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622829ACE61200CD5EBE /* WebRepository.swift */; };
 		8DE4D51129ACB81900F89A22 /* PexelsSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */; };
 		8DE4D51829ACB81900F89A22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4D51729ACB81900F89A22 /* Preview Assets.xcassets */; };
 		8DE4D52229ACB81900F89A22 /* PexelsSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4D52129ACB81900F89A22 /* PexelsSearchTests.swift */; };
@@ -40,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		8D53622029ACE00A00CD5EBE /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPhotoRepository.swift; sourceTree = "<group>"; };
+		8D53622829ACE61200CD5EBE /* WebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		8D53622A29ACEA4B00CD5EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DE4D50D29ACB81900F89A22 /* PexelsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsSearchApp.swift; sourceTree = "<group>"; };
 		8DE4D51729ACB81900F89A22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -81,6 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D53622229ACE15400CD5EBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8D53622529ACE28900CD5EBE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8D53622829ACE61200CD5EBE /* WebRepository.swift */,
+				8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		8DE4D50429ACB81800F89A22 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +128,10 @@
 		8DE4D50F29ACB81900F89A22 /* PexelsSearch */ = {
 			isa = PBXGroup;
 			children = (
+				8D53622A29ACEA4B00CD5EBE /* Info.plist */,
 				8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */,
+				8D53622529ACE28900CD5EBE /* Repository */,
+				8D53622229ACE15400CD5EBE /* ViewModel */,
 				8DE4D54429ACC37800F89A22 /* Model */,
 				8DE4D53A29ACBC6F00F89A22 /* View */,
 				8DE4D53D29ACBCB500F89A22 /* Resources */,
@@ -304,6 +331,9 @@
 				8DE4D54129ACBCEB00F89A22 /* PhotoListView.swift in Sources */,
 				8DE4D53C29ACBC6F00F89A22 /* ContentView.swift in Sources */,
 				8DE4D54329ACBD7B00F89A22 /* PhotoItemView.swift in Sources */,
+				8D53622929ACE61200CD5EBE /* WebRepository.swift in Sources */,
+				8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */,
+				8D53622729ACE2A800CD5EBE /* SearchPhotoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +495,7 @@
 				DEVELOPMENT_TEAM = AAKJL3KUU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PexelsSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -494,7 +524,7 @@
 				DEVELOPMENT_TEAM = AAKJL3KUU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = PexelsSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
