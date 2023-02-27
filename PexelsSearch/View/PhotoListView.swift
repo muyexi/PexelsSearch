@@ -20,8 +20,10 @@ struct PhotoListView: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(SearchResult.mockedData?.photos ?? []) { photo in
-                    GeometryReader { geo in
-                        PhotoItemView(size: geo.size.width, photo: photo)
+                    NavigationLink(destination: PhotoDetailView(photo: photo)) {
+                        GeometryReader { geo in
+                            PhotoItemView(size: geo.size.width, photo: photo)
+                        }
                     }
                     .cornerRadius(8.0)
                     .aspectRatio(1, contentMode: .fit)
