@@ -11,6 +11,7 @@
 		8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */; };
 		8D53622729ACE2A800CD5EBE /* SearchPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */; };
 		8D53622929ACE61200CD5EBE /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622829ACE61200CD5EBE /* WebRepository.swift */; };
+		8D53622D29AD821B00CD5EBE /* MockedServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622C29AD821B00CD5EBE /* MockedServices.swift */; };
 		8DE4D51129ACB81900F89A22 /* PexelsSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */; };
 		8DE4D51829ACB81900F89A22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4D51729ACB81900F89A22 /* Preview Assets.xcassets */; };
 		8DE4D52229ACB81900F89A22 /* PexelsSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4D52129ACB81900F89A22 /* PexelsSearchTests.swift */; };
@@ -47,6 +48,7 @@
 		8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPhotoRepository.swift; sourceTree = "<group>"; };
 		8D53622829ACE61200CD5EBE /* WebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
 		8D53622A29ACEA4B00CD5EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D53622C29AD821B00CD5EBE /* MockedServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedServices.swift; sourceTree = "<group>"; };
 		8DE4D50D29ACB81900F89A22 /* PexelsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsSearchApp.swift; sourceTree = "<group>"; };
 		8DE4D51729ACB81900F89A22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		8DE4D52029ACB81900F89A22 /* PexelsSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				8D53622C29AD821B00CD5EBE /* MockedServices.swift */,
 				8DE4D52129ACB81900F89A22 /* PexelsSearchTests.swift */,
 			);
 			path = PexelsSearchTests;
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D53622D29AD821B00CD5EBE /* MockedServices.swift in Sources */,
 				8DE4D52229ACB81900F89A22 /* PexelsSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

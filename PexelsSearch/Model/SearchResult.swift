@@ -1,10 +1,14 @@
 import Foundation
 
 // MARK: - SearchResult
-struct SearchResult: Codable {
+struct SearchResult: Codable, Equatable {
     let totalResults, page, perPage: Int
     let photos: [Photo]
     let nextPage: String?
+    
+    static func == (lhs: SearchResult, rhs: SearchResult) -> Bool {
+        return lhs.photos == rhs.photos
+    }
 }
 
 // MARK: - Photo
