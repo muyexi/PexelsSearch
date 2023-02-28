@@ -37,7 +37,7 @@ class PhotoListViewModel: ObservableObject {
         }
     }
 
-    init(service: SearchPhotoRepository) {
+    init(service: SearchPhotoService) {
         self.service = service
 
         $searchText
