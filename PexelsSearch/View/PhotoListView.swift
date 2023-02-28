@@ -15,7 +15,7 @@ struct PhotoListView: View {
                     .navigationTitle("Pexels")
                     .navigationBarTitleDisplayMode(.inline)
             }
-            .searchable(text: $viewModel.searchText)
+            .searchable(text: $viewModel.searchText, prompt: "Search Photos")
         }
     }
 

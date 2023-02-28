@@ -24,6 +24,6 @@ struct PhotoItemView: View {
 
 struct PhotoItemView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoItemView(size: 50, photo: SearchResult.mockedData!.photos.first!)
+        PhotoItemView(size: UIScreen.main.bounds.width, photo: SearchResult.mockedData!.photos.first!)
     }
 }

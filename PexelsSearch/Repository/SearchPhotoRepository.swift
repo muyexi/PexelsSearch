@@ -26,7 +26,7 @@ class SearchPhotoRepository: SearchPhotoService, WebRepository {
     func search(query: String) -> AnyPublisher<SearchResult, Error> {
         return request(params: [
             "query": query,
-            "per_page": "20",
+            "per_page": "100",
         ])
     }
 }
