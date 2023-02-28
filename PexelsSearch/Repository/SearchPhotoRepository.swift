@@ -2,11 +2,11 @@ import Foundation
 import SwiftUI
 import Combine
 
-protocol SearchRepositoryProtocol: WebRepository {
+protocol SearchPhotoService {
     func search(query: String) -> AnyPublisher<SearchResult, Error>
 }
 
-class SearchPhotoRepository: SearchRepositoryProtocol {
+class SearchPhotoRepository: SearchPhotoService, WebRepository {
     var baseURL: String {
         return "https://api.pexels.com/v1/"
     }

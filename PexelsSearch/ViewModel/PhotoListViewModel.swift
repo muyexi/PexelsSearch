@@ -21,7 +21,7 @@ class PhotoListViewModel: ObservableObject {
     @Published var status: LoadingStatus<SearchResult> = .none
     @Published var searchText: String = ""
 
-    let service: SearchPhotoRepository
+    let service: SearchPhotoService
     private var cancelBag = Set<AnyCancellable>()
 
     var statusMessage: String {

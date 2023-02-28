@@ -3,7 +3,7 @@ import Combine
 
 @testable import PexelsSearch
 
-class MockedSearchPhotoRepository: SearchPhotoRepository {
+class MockedSearchPhotoRepository: SearchPhotoService {
     let result: SearchResult
     let delay: TimeInterval
 
@@ -12,7 +12,7 @@ class MockedSearchPhotoRepository: SearchPhotoRepository {
         self.delay = delay
     }
 
-    override func search(query: String) -> AnyPublisher<SearchResult, Error> {
+    func search(query: String) -> AnyPublisher<SearchResult, Error> {
         if delay == 0 {
             return Just(result)
                 .setFailureType(to: Error.self)
@@ -26,14 +26,14 @@ class MockedSearchPhotoRepository: SearchPhotoRepository {
     }
 }
 
-class MockedSearchErrorRepository: SearchPhotoRepository {
+class MockedSearchErrorRepository: SearchPhotoService {
     let error: Error
 
     init(error: Error) {
         self.error = error
     }
 
-    override func search(query: String) -> AnyPublisher<SearchResult, Error> {
+    func search(query: String) -> AnyPublisher<SearchResult, Error> {
         return Fail<SearchResult, Error>(error: error).eraseToAnyPublisher()
     }
 }
