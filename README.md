@@ -1,7 +1,7 @@
 ### PexelsSearch
 
-* Built with MVVM Architecture using SwiftUI and Combine.
-*
+* MVVM Architecture.
+* SwiftUI and Combine implementation.
 
 #### Architecture overview
 
