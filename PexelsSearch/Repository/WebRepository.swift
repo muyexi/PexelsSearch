@@ -15,6 +15,7 @@ extension WebRepository {
     var session: URLSession {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 60
+        configuration.timeoutIntervalForResource = 60
         configuration.waitsForConnectivity = true
 
         return URLSession(configuration: configuration)

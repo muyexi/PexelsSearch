@@ -43,17 +43,17 @@ class PhotoListViewModel: ObservableObject {
         $searchText
             .filter { !$0.isEmpty }
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .map({ query -> AnyPublisher<SearchResult, Error> in
+            .map({ query in
                 self.status = .loading
-                return service.search(query: query.trimmingCharacters(in: .whitespaces))
+                return service.search(query: query.trimmingCharacters(in: .whitespaces)).catch({ error in
+                    self.status = LoadingStatus.failed(error)
+                    return Empty<SearchResult, Never>()
+                })
             })
             .switchToLatest()
-            .sink { completion in
-                if case let .failure(error) = completion {
-                    self.status = .failed(error)
-                }
-            } receiveValue: { result in
-                self.status = .loaded(result)
-            }.store(in: &cancelBag)
+            .sink { result in
+                self.status = LoadingStatus.loaded(result)
+            }
+            .store(in: &cancelBag)
     }
 }
