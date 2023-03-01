@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D2CF9F729AEF917009063D3 /* PhotoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CF9F629AEF917009063D3 /* PhotoListService.swift */; };
+		8D2CF9F929AF062D009063D3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CF9F829AF062D009063D3 /* Photo.swift */; };
 		8D53622129ACE00A00CD5EBE /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622029ACE00A00CD5EBE /* PhotoDetailView.swift */; };
 		8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */; };
 		8D53622729ACE2A800CD5EBE /* SearchPhotoWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622629ACE2A800CD5EBE /* SearchPhotoWebRepository.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		8D2CF9F629AEF917009063D3 /* PhotoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListService.swift; sourceTree = "<group>"; };
+		8D2CF9F829AF062D009063D3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		8D53622029ACE00A00CD5EBE /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		8D53622629ACE2A800CD5EBE /* SearchPhotoWebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPhotoWebRepository.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE4D54529ACC3B600F89A22 /* SearchResult.swift */,
+				8D2CF9F829AF062D009063D3 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				8DE4D54129ACBCEB00F89A22 /* PhotoListView.swift in Sources */,
 				8DE4D53C29ACBC6F00F89A22 /* ContentView.swift in Sources */,
 				8DE4D54329ACBD7B00F89A22 /* PhotoItemView.swift in Sources */,
+				8D2CF9F929AF062D009063D3 /* Photo.swift in Sources */,
 				8D53622929ACE61200CD5EBE /* WebRepository.swift in Sources */,
 				8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */,
 				8D53622729ACE2A800CD5EBE /* SearchPhotoWebRepository.swift in Sources */,
