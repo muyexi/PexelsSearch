@@ -10,7 +10,7 @@ final class PexelsSearchTests: XCTestCase {
     private let query = "nature"
 
     func test_not_loaded() throws {
-        let service = MockedSearchPhotoRepository(result: mockedResult)
+        let service = MockedSearchPhotoService(result: mockedResult)
         let viewModel = PhotoListViewModel(service: service)
         viewModel.searchText = ""
 
@@ -18,7 +18,7 @@ final class PexelsSearchTests: XCTestCase {
     }
 
     func test_loading() throws {
-        let service = MockedSearchPhotoRepository(result: mockedResult, delay: searchDelay)
+        let service = MockedSearchPhotoService(result: mockedResult, delay: searchDelay)
 
         let viewModel = PhotoListViewModel(service: service)
         viewModel.searchText = query
@@ -28,7 +28,7 @@ final class PexelsSearchTests: XCTestCase {
     }
 
     func test_loaded() throws {
-        let service = MockedSearchPhotoRepository(result: mockedResult)
+        let service = MockedSearchPhotoService(result: mockedResult)
 
         let viewModel = PhotoListViewModel(service: service)
         viewModel.searchText = query
@@ -39,7 +39,7 @@ final class PexelsSearchTests: XCTestCase {
 
     func test_loading_failed() throws {
         let error = URLError(.badServerResponse)
-        let service = MockedSearchErrorRepository(error: error)
+        let service = MockedSearchErrorService(error: error)
 
         let viewModel = PhotoListViewModel(service: service)
         viewModel.searchText = query
