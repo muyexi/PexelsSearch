@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2CF9F729AEF917009063D3 /* PhotoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CF9F629AEF917009063D3 /* PhotoListService.swift */; };
 		8D53622129ACE00A00CD5EBE /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622029ACE00A00CD5EBE /* PhotoDetailView.swift */; };
 		8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */; };
-		8D53622729ACE2A800CD5EBE /* SearchPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */; };
+		8D53622729ACE2A800CD5EBE /* SearchPhotoWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622629ACE2A800CD5EBE /* SearchPhotoWebRepository.swift */; };
 		8D53622929ACE61200CD5EBE /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622829ACE61200CD5EBE /* WebRepository.swift */; };
 		8D53622D29AD821B00CD5EBE /* MockedServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53622C29AD821B00CD5EBE /* MockedServices.swift */; };
 		8DE4D51129ACB81900F89A22 /* PexelsSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */; };
@@ -43,9 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D2CF9F629AEF917009063D3 /* PhotoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListService.swift; sourceTree = "<group>"; };
 		8D53622029ACE00A00CD5EBE /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		8D53622329ACE18200CD5EBE /* PhotoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
-		8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPhotoRepository.swift; sourceTree = "<group>"; };
+		8D53622629ACE2A800CD5EBE /* SearchPhotoWebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPhotoWebRepository.swift; sourceTree = "<group>"; };
 		8D53622829ACE61200CD5EBE /* WebRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
 		8D53622A29ACEA4B00CD5EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D53622C29AD821B00CD5EBE /* MockedServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedServices.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D2CF9F529AEF8D0009063D3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8D2CF9F629AEF917009063D3 /* PhotoListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8D53622229ACE15400CD5EBE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8D53622829ACE61200CD5EBE /* WebRepository.swift */,
-				8D53622629ACE2A800CD5EBE /* SearchPhotoRepository.swift */,
+				8D53622629ACE2A800CD5EBE /* SearchPhotoWebRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -132,6 +142,7 @@
 			children = (
 				8D53622A29ACEA4B00CD5EBE /* Info.plist */,
 				8DE4D51029ACB81900F89A22 /* PexelsSearchApp.swift */,
+				8D2CF9F529AEF8D0009063D3 /* Service */,
 				8D53622529ACE28900CD5EBE /* Repository */,
 				8D53622229ACE15400CD5EBE /* ViewModel */,
 				8DE4D54429ACC37800F89A22 /* Model */,
@@ -328,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D2CF9F729AEF917009063D3 /* PhotoListService.swift in Sources */,
 				8DE4D54629ACC3B600F89A22 /* SearchResult.swift in Sources */,
 				8DE4D51129ACB81900F89A22 /* PexelsSearchApp.swift in Sources */,
 				8D53622129ACE00A00CD5EBE /* PhotoDetailView.swift in Sources */,
@@ -336,7 +348,7 @@
 				8DE4D54329ACBD7B00F89A22 /* PhotoItemView.swift in Sources */,
 				8D53622929ACE61200CD5EBE /* WebRepository.swift in Sources */,
 				8D53622429ACE18200CD5EBE /* PhotoListViewModel.swift in Sources */,
-				8D53622729ACE2A800CD5EBE /* SearchPhotoRepository.swift in Sources */,
+				8D53622729ACE2A800CD5EBE /* SearchPhotoWebRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

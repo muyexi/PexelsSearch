@@ -21,7 +21,7 @@ class PhotoListViewModel: ObservableObject {
     @Published var status: LoadingStatus<SearchResult> = .none
     @Published var searchText: String = ""
 
-    let service: SearchPhotoService
+    let service: PhotoListServiceProtocol
     private var cancelBag = Set<AnyCancellable>()
 
     var statusMessage: String {
@@ -37,7 +37,7 @@ class PhotoListViewModel: ObservableObject {
         }
     }
 
-    init(service: SearchPhotoService) {
+    init(service: PhotoListServiceProtocol) {
         self.service = service
 
         $searchText

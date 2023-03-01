@@ -52,6 +52,7 @@ struct PhotoListView: View {
 
 struct PhotoListView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoListView(viewModel: PhotoListViewModel(service: SearchPhotoRepository()))
+        let viewModel = PhotoListViewModel(service: PhotoListService(webRepository: SearchPhotoWebRepository()))
+        PhotoListView(viewModel: viewModel)
     }
 }

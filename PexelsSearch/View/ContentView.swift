@@ -2,7 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PhotoListView(viewModel: PhotoListViewModel(service: SearchPhotoRepository()))
+        let viewModel = PhotoListViewModel(service: PhotoListService(webRepository: SearchPhotoWebRepository()))
+        PhotoListView(viewModel: viewModel)
     }
 }
 

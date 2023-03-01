@@ -3,7 +3,7 @@ import Combine
 
 @testable import PexelsSearch
 
-class MockedSearchPhotoRepository: SearchPhotoService {
+class MockedSearchPhotoRepository: PhotoListServiceProtocol {
     let result: SearchResult
     let delay: TimeInterval
 
@@ -26,7 +26,7 @@ class MockedSearchPhotoRepository: SearchPhotoService {
     }
 }
 
-class MockedSearchErrorRepository: SearchPhotoService {
+class MockedSearchErrorRepository: PhotoListServiceProtocol {
     let error: Error
 
     init(error: Error) {
