@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class SearchPhotoWebRepository: WebRepository {
+class PhotoListWebRepository: WebRepository {
     var baseURL: String {
         return "https://api.pexels.com/v1/"
     }

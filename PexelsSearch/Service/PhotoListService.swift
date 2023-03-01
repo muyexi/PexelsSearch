@@ -6,9 +6,9 @@ protocol PhotoListServiceProtocol {
 }
 
 class PhotoListService: PhotoListServiceProtocol {
-    let webRepository: SearchPhotoWebRepository
+    let webRepository: PhotoListWebRepository
 
-    init(webRepository: SearchPhotoWebRepository) {
+    init(webRepository: PhotoListWebRepository) {
         self.webRepository = webRepository
     }
 

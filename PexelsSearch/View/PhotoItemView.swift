@@ -18,6 +18,7 @@ struct PhotoItemView: View {
                 .foregroundColor(.black)
                 .background(.white)
                 .opacity(0.8)
+                .lineLimit(1)
         }
     }
 }

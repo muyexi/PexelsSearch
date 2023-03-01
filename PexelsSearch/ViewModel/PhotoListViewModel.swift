@@ -45,7 +45,7 @@ class PhotoListViewModel: ObservableObject {
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .map({ query -> AnyPublisher<SearchResult, Error> in
                 self.status = .loading
-                return service.search(query: query)
+                return service.search(query: query.trimmingCharacters(in: .whitespaces))
             })
             .switchToLatest()
             .sink { completion in
