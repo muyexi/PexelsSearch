@@ -25,23 +25,27 @@ struct PhotoListView: View {
             Text(viewModel.statusMessage)
             ProgressView()
         case let .loaded(result):
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(result.photos) { photo in
-                        NavigationLink(destination: PhotoDetailView(photo: photo)) {
-                            GeometryReader { geo in
-                                PhotoItemView(size: geo.size.width, photo: photo)
-                            }
-                        }
-                        .cornerRadius(8.0)
-                        .aspectRatio(1, contentMode: .fit)
-                    }
-                }
-                .padding()
-            }
+            gridView(photos: result.photos)
             Text(viewModel.statusMessage).font(.footnote).foregroundColor(.gray)
         default:
             Text(viewModel.statusMessage)
+        }
+    }
+
+    func gridView(photos: [Photo]) -> some View {
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(photos) { photo in
+                    NavigationLink(destination: PhotoDetailView(photo: photo)) {
+                        GeometryReader { geo in
+                            PhotoItemView(size: geo.size.width, photo: photo)
+                        }
+                    }
+                    .cornerRadius(8.0)
+                    .aspectRatio(1, contentMode: .fit)
+                }
+            }
+            .padding()
         }
     }
 }
