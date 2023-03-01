@@ -7,4 +7,4 @@
 
 ![architecture](images/arc.png)
 
-For example, `PhotoListView` <=> `PhotoListViewModel` <=> `SearchPhotoRepository`.
+For example, `PhotoListView` <=> `PhotoListViewModel` <=> `PhotoListService` <=> `PhotoListWebRepository`.
